@@ -1,3 +1,4 @@
+# Creating the matrix
 makeCacheMatrix <- function(x = matrix()){
   inv <- null
   set <- function(y){
@@ -13,6 +14,7 @@ makeCacheMatrix <- function(x = matrix()){
         getinverse = getinverse)
 }
 
+#If the matrix inverse is already availble in Cashe pull from Cache. #Otherwise Create inverse
 cacheSolve <- function(x, ...){
   inv <- x$getinverse()
   if (!is.null(inv)) {
